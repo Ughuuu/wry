@@ -508,7 +508,7 @@ impl InnerWebView {
                 Err(_) => return None,
               },
             };
-            let id = parent_window.id();
+            let id = parent_window.as_ptr() as usize;
             let app = parent_window.application();
 
             let window = if let Some(app) = app {
